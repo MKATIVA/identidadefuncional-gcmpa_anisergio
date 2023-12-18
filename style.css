@@ -30,6 +30,7 @@ body {
     background-color: #fff;
     inset: 0;
     opacity: 0.2;
+    z-index: -2;
 }
 
 .NomeFoto {
@@ -43,12 +44,21 @@ body {
 .img-3x4 {
     z-index: 999;
 }
+.img-3x4 img{
+    border-radius: 8px;
+    border: 1px solid #000;
+}
 
 .separacao {
     display: flex;
     gap: 20px;
 }
-
+.assinatura {
+    display: flex;
+    justify-content: center;
+    z-index: 9;
+    margin: 20px;
+}
 .bgImg {
     display: flex;
     justify-content: center;
@@ -62,6 +72,7 @@ body {
     opacity: 0.1;
     text-align: center;
     bottom: 10px;
+    z-index: -1;
 }
 
 form {
@@ -74,7 +85,6 @@ label {
     font-weight: 600;
     font-size: 13px;
 }
-
 input {
     width: 100%;
     padding: 8px;
@@ -90,4 +100,19 @@ h1 {
     text-align: center;
     color: #050000;
     z-index: 999;
+}
+
+.texto {
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1em;
+    font-size: 12px;
+    border-top: 1px solid #000;
+}
+
+@media (max-width: 360px) {
+    input {
+        width: 110%;
+        font-size: 12.8px;
+    }
 }
